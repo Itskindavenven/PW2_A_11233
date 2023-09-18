@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>210711233-Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0/css/bootstrap-select.min.css">
+    <style>
+        body {
+            background-color: rgb(0, 99, 248);
+        }
+
+        .rounded {
+            border-radius: 100px;
+            background-color: aliceblue;
+            height: fit-content;
+        }
+
+        .row.g-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-label {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Halaman Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Halaman Register</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-auto">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="rounded p-4 shadow">
+            <h1 class="text-center">Formulir Registrasi Data Mahasiswa</h1>
+            <hr style="border: solid;">
+
+            <form action="">
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="inputNama" class="form-label"><strong>Nama Mahasiswa</strong></label>
+                        <input type="text" class="form-control" id="inputNama" placeholder="Masukkan Nama" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <label for="inputNim" class="form-label"><strong>Nomor Induk Mahasiswa</strong></label>
+                        <input type="text" class="form-control" id="inputNim" placeholder="Masukkan NIM" aria-label="Last name">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputProdi" class="form-label"><strong>Program Studi</strong></label>
+                        <select id="inputProdi" class="form-select">
+                            <option value="">Pilih Prodi</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Teknik Industri">Teknik Industri</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="birthdate" class="form-label"><strong>Tanggal Lahir</strong></label>
+                        <input type="date" class="form-control" id="birthdate">
+                    </div>
+                </div>
+                <br>
+                <tr>
+                    <td style="padding-right: 20px;">
+                        <strong>
+                            Jenis Kelamin
+                        </strong>
+                    </td>
+                    <td style="padding-left: 30px;">
+                        <input type="radio" id="laki" name="jk" value="Laki-laki" style="margin-left: 20px;"/> 
+                        <label for="laki" style="margin-right: 10px;">Laki-laki</label>
+                
+                        <input type="radio" id="perempuan" name="jk" value="Perempuan"/>
+                        <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="inputNoTelp" class="form-label"><strong>Nomor Telepon</strong></label>
+                        <input type="text" class="form-control" id="inputNoTelp" placeholder="Masukkan Nomor Telepon" aria-label="First name">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="inputEmail" class="form-label"><strong>Email</strong></label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Masukkan Email" required>
+                        <div class="invalid-feedback">
+                            Please include an '@' in the email address.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword" class="form-label"><strong>Password</strong></label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Masukkan Password">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="inputPhoto" class="form-label"><strong>Photo</strong></label>
+                        <input class="form-control" type="file" id="inputPhoto" multiple>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <strong>Hal Favorit</strong>
+                    <div style="margin-right: 10px;">
+                        <input type="checkbox" id="game" value="Bermain Game"/>
+                        <label for="game">Bermain Game</label>
+                    </div>
+                    <div style="margin-right: 10px;">
+                        <input type="checkbox" id="nonton" value="Menonton Film"/>
+                        <label for="nonton">Menonton Film</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="olahraga" value="Olahraga"/>
+                        <label for="olahraga">Olahraga</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-floating mb-3">
+                        <strong>Deskripsi</strong>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled"></textarea>
+                        <label for="floatingTextareaDisabled" style="margin-left: 10px; margin-top: 20px;"> Deskripsi</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="d-grid gap-2 col-auto">
+                        <button type="button" class="btn btn-primary" onclick="resetForm()" style="background-color: red;">Reset</button>
+                    </div>
+                    <div class="d-grid gap-2 col-auto">
+                        <button type="button" class="btn btn-primary" onclick="checkForm()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function checkForm() {
+            var nama = document.getElementById("inputNama").value;
+            var nim = document.getElementById("inputNim").value;
+            var prodi = document.getElementById("inputProdi").value;
+            var tglLahir = document.getElementById("birthdate").value;
+            var jk = document.querySelector('input[name="jk"]:checked');
+            var noTelp = document.getElementById("inputNoTelp").value;
+            var email = document.getElementById("inputEmail").value;
+            var password = document.getElementById("inputPassword").value;
+            var photo = document.getElementById("inputPhoto").value;
+            var halFavorit = document.querySelectorAll('input[type="checkbox"]:checked');
+            var deskripsi = document.getElementById("floatingTextareaDisabled").value;
+            
+            if (nama === "") {
+                alert("Nama Mahasiswa Tidak Boleh Kosong!");
+                return false;
+            }
+    
+            if (nim === "") {
+                alert("Nomor Induk Mahasiswa Tidak Boleh Kosong!");
+                return false;
+            }
+    
+            if (prodi === "") {
+                alert("Pilih Program Studi Anda!");
+                return false;
+            }
+    
+            if (tglLahir === "") {
+                alert("Tanggal Lahir Tidak Boleh Kosong!");
+                return false;
+            }
+    
+            if (!jk) {
+                alert("Pilih Jenis Kelamin Anda!");
+                return false;
+            }
+    
+            if (noTelp === "") {
+                alert("Nomor Telepon Tidak Boleh Kosong!");
+                return false;
+            }
+            
+            if (email === "") {
+                alert("Email Tidak Boleh Kosong!");
+                return false;
+            }
+
+            if (!email.includes("@")) {
+                alert("Email harus mengandung karakter '@'!");
+                return false;
+            }
+    
+            if (password === "") {
+                alert("Password Tidak Boleh Kosong!");
+                return false;
+            }
+    
+            if (photo === "") {
+                alert("Silahkan Input Photo!");
+                return false;
+            }
+    
+            if (halFavorit.length === 0) {
+                alert("Pilih Hal Favorit Anda!");
+                return false;
+            }
+
+            if (deskripsi === "") {
+                alert("Deskripsi tidak boleh kosong!");
+                return false;
+            }
+
+            var konfirmasi = confirm("Apakah Data Anda Sudah Benar?");
+            if (konfirmasi) {
+                alert("Data Berhasil Disimpan!");
+                resetForm();
+            } else {
+                alert("Data Gagal Disimpan!");
+            }
+        }
+    
+        function resetForm() {
+            document.getElementById("inputNama").value = "";
+            document.getElementById("inputNim").value = "";
+            document.getElementById("inputProdi").value = "";
+            document.getElementById("birthdate").value = "";
+            var jkInputs = document.querySelectorAll('input[name="jk"]');
+            for (var i = 0; i < jkInputs.length; i++) {
+                jkInputs[i].checked = false;
+            }
+            document.getElementById("inputNoTelp").value = "";
+            document.getElementById("inputEmail").value = "";
+            document.getElementById("inputPassword").value = "";
+            document.getElementById("inputPhoto").value = "";
+            var halFavoritInputs = document.querySelectorAll('input[type="checkbox"]');
+            for (var i = 0; i < halFavoritInputs.length; i++) {
+                halFavoritInputs[i].checked = false;
+            }
+            document.getElementById("floatingTextareaDisabled").value = "";
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0/js/bootstrap-select.min.js"></script>
+</body>
+</html>
